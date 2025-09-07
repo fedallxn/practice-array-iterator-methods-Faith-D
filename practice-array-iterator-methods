@@ -1,1 +1,22 @@
-//start here
+//Task 1: Using forEach()
+let cities = ['Amsterdam','Athens','St.Louis','Riquewihr','Seoul']; //Fun Fact: I have been to 3 of these cities though one is not a city but a quaint town!
+let upCities = cities.forEach(city => {
+    console.log(`My favorite city is`, city.toUpperCase()) 
+    //Will continue to log each city until it has gone through the entire array while simultaneously capitalizing the city
+});
+
+//Task 2: Transforming with map()
+let numbers = [1,2,3,4,5];
+let squares = numbers.map(num => num ** 2); // The ** is the exponent symbol, so each number will be squared
+console.log(squares); //logs each squared element
+
+//Task 3: Filtering with filter()
+let scores = [85,42,90,73,30,100];
+let highScores = scores.filter(score => score >= 80); //the condition is to look for scores above or equal to 80
+console.log(highScores); //logs scores 85, 90, and 100
+
+//Task 4: Finding with find() and findIndex()
+let favoriteFoods = ['Sesame Balls','Crab Rangoon','Mei Fun','Takoyaki','Kimchi','Korean Corn Dog'];
+let moreThan4 = favoriteFoods.find(food => food.length >= 4); //checks if the each elements length is above or equal to 4 characters, returns the FIRST that meets this condition
+let indexOfFood = favoriteFoods.findIndex(food => food.length >= 4); //checks for index of the FIRST element that has a length of greater than or equal to 4 characters
+console.log(moreThan4, 'are at index', indexOfFood); //logging both methods at once to see the relationship since they both return the FIRST element that matches the condition
